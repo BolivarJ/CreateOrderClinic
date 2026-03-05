@@ -13,10 +13,14 @@ import app.domain.ports.UserPort;
 import app.domain.ports.PatientPort;
 import app.domain.ports.OrderPort;
 
+@Service
 public class CreateOrder {
 
+    @Autowired
     private UserPort userPort;
+    @Autowired
     private PatientPort patientPort;
+    @Autowired
     private OrderPort orderPort;
 
     public void create(Order order) throws BusinessException {
